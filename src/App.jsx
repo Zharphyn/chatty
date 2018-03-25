@@ -1,4 +1,7 @@
+
+
 import React, {Component} from 'react';
+import ChatBar from './ChatBar.jsx';
 
 class App extends Component {
   render() {

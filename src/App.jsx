@@ -2,7 +2,8 @@
 
 import React, {Component} from 'react';
 import ChatBar from './ChatBar.jsx';
-
+import MessageList from './MessageList.jsx';
+import NavBar from './NavBar.jsx';
 
 const defaultState = {
   defaultValue: {name: 'Anonymous'},
@@ -80,4 +81,5 @@ class App extends Component {
     );
   }
 }
+
 export default App;

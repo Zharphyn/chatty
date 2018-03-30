@@ -5,16 +5,7 @@ import ReactDOM from 'react-dom';
 
 export default class MessageList extends Component {
   render() {
-      const messages = this.props.messages.map((message) => {
-          return (
-              <Message messageInfo={message} key={message.id}/>
-            )
-        })
-    return (
-        <main ref='messages' className='messages'>
-            {messages}
-        </main>
-    );
+    console.log('Inside MessageList.jsx Render');
   }
 }
 

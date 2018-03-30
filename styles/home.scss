@@ -7,7 +7,7 @@ body {
 }
 
 
-.chatbar {
+.navbar {
   background: tomato;
   border-top: 1px solid black;
   bottom: 0;
@@ -22,3 +22,36 @@ h1 {
   color: tomato;
 }
 
+.chatbar {
+  background: $brand-color;
+  border-top: 1px solid $dark;
+  bottom: 0;
+  display: flex;
+  left: 0;
+  padding: 5px;
+  position: fixed;
+  right: 0;
+}
+
+.chatbar-message,
+.chatbar-username {
+  border: 1px solid $dark;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  margin: 5px;
+  padding: 0 9px;
+}
+
+.chatbar-message {
+  flex: 8;
+}
+
+.chatbar-username {
+  flex: 2;
+}
+
+.message {
+  display: flex;
+  padding: 5px;
+}

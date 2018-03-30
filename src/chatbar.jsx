@@ -16,7 +16,6 @@ export default class ChatBar extends Component {
   }
   
   render() {
-    console.log('Inside ChatBar.jsx Render');
     return (
       <chatbar>
         <input type="text" className="chatbar-username" placeholder="Your name (Optional)" />

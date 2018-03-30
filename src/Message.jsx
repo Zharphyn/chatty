@@ -1,15 +1,17 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
+import React, { Component } from 'react';
 export default class Message extends Component {
   render() {
-    console.log('Inside Message.jsx Render');
-        return (
-      <message>ChatBar</message>
+    const props = this.props;
+    return (
+      <div className="message">
+        <div className="username">
+          <span className="message-username">{props.username}</span>
+        </div>
+        <div className="content">
+          <span className="message-content">{props.content}</span>
+        </div>
+      </div>
     );
   }
 }
-
-Message.propTypes = {
-  messageInfo: PropTypes.object
-};

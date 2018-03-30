@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
-import Message from './Message.jsx';
-import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom';
+import Message from './message.jsx';
 
 export default class MessageList extends Component {
   render() {
-    console.log('Inside MessageList.jsx Render');
-        return (
-      <messagelist>ChatBar</messagelist>
+    const props = this.props;
+    const messages = props.messages.map(({ id, username, content }) => (
+      <Message
+        key={id}
+        username={username}
+        content={content} />
+    ))
+    return (
+      <main className="messages">
+        {messages}
+        <div className="message system">
+        </div>
+      </main>
     );
   }
 }
-
-
-MessageList.propTypes = {
-    messages: PropTypes.array
-};

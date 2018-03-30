@@ -1,14 +1,20 @@
+$brand-color : #3cb371;
+$dark: #3B2A41;
+$background: #fefefe;
+$gold: #D1BC66;
+$peachy: #C99F9A;
+$black: black;
+
 body {
-  background: white;
-  color: black;
+  background: $background;
+  color: $black;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   margin: 70px 0;
 }
 
-
 .navbar {
-  background: tomato;
+  background: $background;
   border-top: 1px solid black;
   bottom: 0;
   display: flex;
@@ -19,7 +25,7 @@ body {
 }
 
 h1 {
-  color: tomato;
+  color: $dark;
 }
 
 .chatbar {
@@ -36,7 +42,7 @@ h1 {
 .chatbar-message,
 .chatbar-username {
   border: 1px solid $dark;
-  display: block;
+  display: inline-block;
   height: 40px;
   line-height: 40px;
   margin: 5px;
@@ -44,11 +50,11 @@ h1 {
 }
 
 .chatbar-message {
-  flex: 8;
+  flex: 28;
 }
 
 .chatbar-username {
-  flex: 2;
+  flex: 10;
 }
 
 .message {

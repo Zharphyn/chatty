@@ -6,6 +6,9 @@ import ReactDOM from 'react-dom';
 export default class MessageList extends Component {
   render() {
     console.log('Inside MessageList.jsx Render');
+        return (
+      <messagelist>ChatBar</messagelist>
+    );
   }
 }
 

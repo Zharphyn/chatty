@@ -4,6 +4,7 @@ import ChatBar from './ChatBar.jsx';
 import MessageList from './MessageList.jsx';
 import NavBar from './NavBar.jsx';
 import Footer from './footer.jsx';
+import Header from './Header.jsx';
 
 const state = {
   username: {name: 'Anonymous'},
@@ -66,7 +67,7 @@ class App extends Component {
      return (
 
       <div className="entire-app">
-        <navbar />
+        <Header />
         <div className="container">
           <MessageList messages={this.state.messages}/>
         </div>

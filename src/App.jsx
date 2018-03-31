@@ -12,11 +12,11 @@ const state = {
   userCount: 0
 };
 
-class App extends Component {
+export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentUser: { name: 'Anonymous'},
+      username: { name: 'Anonymous'},
       messages: [
         {
           id: 1,
@@ -61,22 +61,46 @@ class App extends Component {
         }
       ]
     };
+    userCount: 7;
+  }
+
+componentDidMount() {
+  console.log("componentDidMount <App />");
+  setTimeout(() => {
+    console.log("Simulating incoming message");
+    // Add a new message to the list of messages in the data store
+    const newMessage = {id: this.state.userCount, username: "Michelle", content: "Hello there!"};
+    this.state.userCount++;
+    const messages = this.state.messages.concat(newMessage);
+    // Update the state of the app component.
+    // Calling setState will trigger a call to render() in App and all child components.
+    this.setState({messages: messages});
+  }, 3000);
+}
+
+  newChatLine() {
+    setTimeout(() => {
+      let newMessage = { id: this.state.userCount, username: this.state.username.name};
+      this.state.userCount++;
+      let newMessageList = this.state.message.concat(newMessage);
+      this.setState({ message: newMessageList }); 
+      }, 1000);
   }
 
   render() {
-     return (
-
+    const currentUser = this.state.username.name;
+    const messages = this.state.message;
+    return (
       <div className="entire-app">
         <Header />
         <div className="container">
           <MessageList messages={this.state.messages}/>
         </div>
         <div>
-          <Footer currentUser={this.state.currentUser} />
+          <ChatBar currentUser={this.state.currentUser} />
         </div>
       </div>
      );
    }
 }
 
-export default App;

@@ -11,10 +11,8 @@ export default class MessageList extends Component {
         content={content} />
     ))
     return (
-      <main className="messages">
+      <main className="messagelist">
         {messages}
-        <div className="message system">
-        </div>
       </main>
     );
   }

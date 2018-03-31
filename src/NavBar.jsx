@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-class NavBar extends Component {
+
+export default class NavBar extends Component {
   render() {
+    console.log('Inside the NavBar!');
     return (
       <nav className="navbar">
-        <a href="/" className="navbar-brand">Chatty</a>
+        <a href="/" className="navbar-link">Chatty</a>
       </nav>
     );
   }
 }
-export default NavBar; 

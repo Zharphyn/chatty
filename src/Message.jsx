@@ -6,10 +6,10 @@ export default class Message extends Component {
     return (
       <div className="message">
         <div className="username">
-          <span className="message-username">{props.username}</span>
+          <span className="message-username"><strong>{props.username}</strong></span>
         </div>
         <div className="content">
-          <span className="message-content">{props.content}</span>
+          <span className="message-content">  {props.content}</span>
         </div>
       </div>
     );

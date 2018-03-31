@@ -4,6 +4,7 @@ $background: #fefefe;
 $gold: #D1BC66;
 $peachy: #C99F9A;
 $black: black;
+$uglyorange: orange;
 
 body {
   background: $background;
@@ -14,18 +15,19 @@ body {
 }
 
 .navbar {
-  background: $background;
+  background: $gold;
   border-top: 1px solid black;
-  bottom: 0;
-  display: flex;
   left: 0;
-  padding: 5px;
-  position: fixed;
-  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+  line-height: 40px;
 }
 
 .chatbar {
-  background: $brand-color;
+  background: $uglyorange;
   border-top: 1px solid $dark;
   bottom: 0;
   display: flex;
@@ -39,7 +41,7 @@ body {
 
 .chatbar-message,
 .chatbar-username {
-  border: 1px solid $dark;
+  border: 1px solid $black;
   display: inline-block;
   height: 40px;
   line-height: 40px;
@@ -58,4 +60,5 @@ body {
 .message {
   display: flex;
   padding: 5px;
+  white-space: pre-wrap;
 }

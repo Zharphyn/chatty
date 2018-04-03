@@ -3,13 +3,6 @@ import React, {Component} from 'react';
 import ChatBar from './ChatBar.jsx';
 import MessageList from './MessageList.jsx';
 import NavBar from './NavBar.jsx';
-import Header from './Header.jsx';
-
-const defaultState = {
-  defaultValue: {name: 'Anonymous'},
-  messages: [],
-  userCount: 0
-};
 
 export default class App extends Component {
   constructor(props) {
@@ -45,10 +38,8 @@ export default class App extends Component {
 
   onMessageHandler(event) {
     let newMessage = JSON.parse(event.data);
-    console.log(newMessage);
 
     if (newMessage.type === 'userCount') {
-      console.log(`Number of users: ${newMessage.connected}`);
       this.setState({ userCount: newMessage.connected });
     } else {
       const msgs = this.state.messages.concat(newMessage);
@@ -62,7 +53,7 @@ export default class App extends Component {
   }
 
   postNameChange(oldUsername, newUsername) {
-    const message = {"type":"incomingNotification", content:`${oldUsername} has changed their name to ${newUsername}`};
+    const message = {type:'incomingNotification', content:`${oldUsername} has changed their name to ${newUsername}`};
     this.socket.send(JSON.stringify(message));
   }
 
@@ -74,7 +65,7 @@ export default class App extends Component {
   }
 
   postNewMessage(message){
-    const currentMessage = {username: message.username, content: message.inputValue, type: "incomingMessage"};
+    const currentMessage = {username: message.username, content: message.inputValue, type: 'incomingMessage'};
     this.socket.send(JSON.stringify(currentMessage));
   }
 

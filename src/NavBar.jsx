@@ -4,7 +4,8 @@ export default class NavBar extends Component {
   render() {
     return (
       <nav className="navbar">
-        <a href="/" className="navbar-link">Chatty</a>
+        <headerName className="navbar-link">Chatty</headerName>
+        <userCount className="user-count">{this.props.userCount} user(s) online</userCount>
       </nav>
     );
   }

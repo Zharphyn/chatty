@@ -18,12 +18,12 @@
 
 ## Getting Started
 
-# Clone this repository.
-# Install dependencies using the npm install command.
-# Start the web server using the npm start command in the root directory. The app will be served at http://localhost:3000/.
-# Run the chatty-server using the npm start in the chatty-server directory.
-# Go to http://localhost:3000/ in your browser.\
-# Open multiple connections in different tabs at http://localhost:3000/ and chat real time!
+1 Clone this repository.
+1 Install dependencies using the npm install command.
+1 Start the web server using the npm start command in the root directory. The app will be served at http://localhost:3000/.
+1 Run the chatty-server using the npm start in the chatty-server directory.
+1 Go to http://localhost:3000/ in your browser.\
+1 Open multiple connections in different tabs at http://localhost:3000/ and chat real time!
 
 ## Final Product
 
